@@ -18,7 +18,7 @@ body{
     
 }
 #ta{
-    margin:7px 2px 0px 2px;
+    margin:10px 2px 0px 2px;
     width:100%;
     height:65%;
     overflow:auto;
@@ -64,6 +64,7 @@ table
 {
     border-collapse:seperate;
     border-spacing:5px;
+    margin-right:3px;
 
 }
 .cols1{
@@ -92,3 +93,25 @@ table
     cursor:pointer;
 }
 
+@media screen and (max-width:500px){
+
+    body{
+        margin:2%;
+    }
+    #todos{
+        padding:7px 30px 30px 30px;
+        width:16em;
+        height:23em;
+    }
+    h1{
+        font-size:25px;
+        font-weight:bold;
+    }
+    input[type="text"]{
+        width:9.3em;
+    }
+    #btn{
+        width:4.8em;
+
+    }
+}
