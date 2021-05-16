@@ -19,9 +19,16 @@ window.onload= function()
             console.log("reached here");
             e.preventDefault();
             e.cancelbubble=true;
-            deleterow(e);
+            deleterow1(e);
+        }
+        else if(e.target.tagName.toLowerCase() == "button")
+        {
+              e.preventDefault();
+              e.cancelbubble=true;
+              deleterow(e);
         }
     },false);
+      
 
 
 }
@@ -61,10 +68,15 @@ function addrow()
     }
 
 }
-function deleterow(e)
+function deleterow1(e)
 {
     
     var t1=e.target.parentNode.parentNode.parentNode;
     tab.removeChild(t1);
     
+}
+function deleterow(e)
+{
+    var t1=e.target.parentNode.parentNode;
+    tab.removeChild(t1);
 }
