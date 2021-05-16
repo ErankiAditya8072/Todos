@@ -42,8 +42,16 @@ function addrow()
         var r4 = document.createElement('td');
         var r5= document.createElement('button');
         r5.className="desbtn";
-        r5.innerHTML='<i class="fas fa-trash-alt fa-lg"></i>';
-
+        console.log(window.screen.width);
+        if (window.screen.width < 600)
+        {
+            r5.innerHTML='<i class="fas fa-trash-alt fa-sm"></i>';
+            console.log("300px");
+        }
+        else
+        {
+           r5.innerHTML='<i class="fas fa-trash-alt fa-lg"></i>';
+        }
         r4.appendChild(r5);
         r2.appendChild(r3);
         r1.appendChild(r2);
