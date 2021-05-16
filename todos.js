@@ -3,6 +3,13 @@ window.onload= function()
     var tab=document.getElementById("tab");
     var but= document.getElementById("btn");
     var tx=document.getElementById("addtext");
+    var m=window.matchMedia("(orientation:landscape)");
+    m.addEventListener("orientationchange",function(){
+        if(m.matches)
+        {
+            changedeleticon();
+        }
+    },false);
     tx.addEventListener('keypress',function(e){
           if (e.keyCode === 13 )
           {
@@ -79,4 +86,15 @@ function deleterow(e)
 {
     var t1=e.target.parentNode.parentNode;
     tab.removeChild(t1);
+}
+function changedeleticon(){
+    var d= document.getElementsByClassName("desbtn");
+    if (d.length > 0)
+    {
+        for(var i=0;i<d.length;i++)
+        {
+            d[0].innerHTML='<i class="fas fa-trash-alt fa-lg"></i>';
+        }
+
+    }
 }
