@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="todos.css">
-        <script src="https://kit.fontawesome.com/ec31267c2f.js" crossorigin="anonymous"></script>
-        <script src="jquery-3.5.1.min.js"></script>
-      
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="todos.css" />
+    <script
+      src="https://kit.fontawesome.com/ec31267c2f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div id="todos">
+      <h1 id="header">Todos</h1>
+      <p>
+        <input type="text" id="addtext" placeholder="Enter a task" />
+        <input type="button" id="btn" value="Add" />
+      </p>
+      <hr />
+      <div id="ta">
+        <table id="tab"></table>
+      </div>
+    </div>
 
-    </head>
-    <body>
-        <div id="todos">
-            <h1 id="header">Todos</h1>
-            <p>
-                <input type="text" id="addtext" placeholder="Enter a task">
-                <input type="button" id ="btn" value="Add">
-            </p>
-            <hr>
-            <div id="ta">
-            <table id="tab">
-            </table>
-            </div>
-        </div>
-        <script src="todos1.js"></script>
-    </body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBILIdpgYns0EXWNNsdS9WhIal2I2-JTX8",
+        authDomain: "learningjs-c2c87.firebaseapp.com",
+        projectId: "learningjs-c2c87",
+        storageBucket: "learningjs-c2c87.appspot.com",
+        messagingSenderId: "831647648148",
+        appId: "1:831647648148:web:0b4b6d480086cfd1c3e781",
+        measurementId: "G-3DP35TT4JF",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+    </script>
+
+    <script src="todos1.js"></script>
+  </body>
 </html>
